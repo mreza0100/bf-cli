@@ -53,10 +53,11 @@ func (a *Actions) Interactive(c *cli.Context) error {
 		return nil
 	}
 
+	bf := brainfuck.New()
 	var input string
 Runner:
 	for {
-		fmt.Print(">")
+		fmt.Print("> ")
 		if _, err := fmt.Scanln(&input); err != nil {
 			return cli.NewExitError(err.Error(), 1)
 		}
@@ -68,7 +69,7 @@ Runner:
 			clearTerminal()
 			continue Runner
 		default:
-			a.exec(strings.NewReader(input))
+			bf.Entry(strings.NewReader(input))
 		}
 	}
 
