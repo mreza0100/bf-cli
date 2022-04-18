@@ -3,7 +3,7 @@ module github.com/mreza0100/brainfuckcli
 go 1.18
 
 require (
-	github.com/mreza0100/brainfuck v0.1.2
+	github.com/mreza0100/brainfuck v0.1.4
 	github.com/urfave/cli v1.22.5
 )
 

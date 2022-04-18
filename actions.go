@@ -13,8 +13,13 @@ import (
 type Actions struct{}
 
 func (_ *Actions) exec(reader io.Reader) {
-	bf := brainfuck.New()
-	bf.Entry(reader)
+	bf := brainfuck.New(&brainfuck.NewOptions{
+		MemorySize:     300,
+		IsMemoryStatic: false,
+		Verbos:         false,
+		Reader:         nil,
+	})
+	bf.Run(reader)
 }
 
 func (a *Actions) File(c *cli.Context) error {
@@ -53,8 +58,13 @@ func (a *Actions) Interactive(c *cli.Context) error {
 		return nil
 	}
 
-	bf := brainfuck.New()
-	bf.VerbosPrint = true
+	bf := brainfuck.New(&brainfuck.NewOptions{
+		MemorySize:     300,
+		IsMemoryStatic: false,
+		Verbos:         false,
+		Reader:         nil,
+	})
+	bf.Verbos = true
 	var input string
 	var brainOut bool = false
 Runner:
@@ -74,7 +84,7 @@ Runner:
 			clearTerminal()
 			continue Runner
 		default:
-			bf.Entry(strings.NewReader(input))
+			bf.Run(strings.NewReader(input))
 		}
 		brainOut = false
 	}

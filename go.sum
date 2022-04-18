@@ -5,6 +5,10 @@ github.com/mreza0100/brainfuck v0.1.1 h1:AecyzTDn5+7/mz06wyaQlqKG6QWvyBorXf5KUMz
 github.com/mreza0100/brainfuck v0.1.1/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
 github.com/mreza0100/brainfuck v0.1.2 h1:sTYJKzsBB78ToLit+VYCi8gE8tR3F7K/m8sGVoqMYak=
 github.com/mreza0100/brainfuck v0.1.2/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
+github.com/mreza0100/brainfuck v0.1.3 h1:QwyAIqKZacsXCT8aF8i+mM4ASwP7aX213AA8xpYN7As=
+github.com/mreza0100/brainfuck v0.1.3/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
+github.com/mreza0100/brainfuck v0.1.4 h1:nMaHbak/+lX/u7ps7csaqdSf32/hV6oni+2fZmNzhGU=
+github.com/mreza0100/brainfuck v0.1.4/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/russross/blackfriday/v2 v2.0.1 h1:lPqVAte+HuHNfhJ/0LC98ESWRz8afy9tM/0RK8m9o+Q=
