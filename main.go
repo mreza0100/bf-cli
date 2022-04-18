@@ -23,7 +23,7 @@ func main() {
 			Action:  actions.File,
 		},
 		{
-			Name:    "interactive",
+			Name:    "interactive - REPL",
 			Aliases: []string{"i", "-i"},
 			Flags: []cli.Flag{
 				cli.BoolFlag{
@@ -32,7 +32,7 @@ func main() {
 					Required: false,
 				},
 			},
-			Usage:       "run brainfuck code from stdin, just like terminal",
+			Usage:       "run brainfuck code in REPL mode",
 			Description: "exit by typing 'exit'. clear terminal by typing 'clear'",
 			ArgsUsage:   "--simple for no fancy terminal",
 			Action:      actions.Interactive,

@@ -54,12 +54,17 @@ func (a *Actions) Interactive(c *cli.Context) error {
 	}
 
 	bf := brainfuck.New()
+	bf.VerbosPrint = true
 	var input string
+	var brainOut bool = false
 Runner:
 	for {
-		fmt.Print("🧠 ")
+		if !brainOut {
+			fmt.Print("🧠> ")
+		}
 		if _, err := fmt.Scanln(&input); err != nil {
-			return cli.NewExitError(err.Error(), 1)
+			brainOut = true
+			continue
 		}
 
 		switch input {
@@ -71,6 +76,7 @@ Runner:
 		default:
 			bf.Entry(strings.NewReader(input))
 		}
+		brainOut = false
 	}
 
 	return nil
