@@ -6,8 +6,6 @@ import (
 	"github.com/urfave/cli"
 )
 
-// a cli program to read file with a given name
-
 var app = cli.NewApp()
 
 func main() {

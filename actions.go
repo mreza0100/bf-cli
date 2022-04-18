@@ -57,7 +57,7 @@ func (a *Actions) Interactive(c *cli.Context) error {
 	var input string
 Runner:
 	for {
-		fmt.Print("> ")
+		fmt.Print("🧠 ")
 		if _, err := fmt.Scanln(&input); err != nil {
 			return cli.NewExitError(err.Error(), 1)
 		}
