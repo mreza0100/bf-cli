@@ -1,4 +1,4 @@
-module github.com/mreza0100/brainfuckcli
+module bf-cli
 
 go 1.18
 
