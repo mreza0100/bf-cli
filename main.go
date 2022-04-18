@@ -1,36 +1,54 @@
 package main
 
 import (
-	"fmt"
-	"os/exec"
+	"os"
+
+	"github.com/urfave/cli"
 )
 
 // a cli program to read file with a given name
 
-func getGitVersion() string {
-	// excute "git describe --tag --always" in terminal
-
-	cmd := exec.Command("pwd")
-
-	out, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err)
-		return "unknown"
-	}
-
-	return string(out)
-}
+var app = cli.NewApp()
 
 func main() {
-	// app := cli.NewApp()
-	// app.Name = "golang-cli-example"
-	// app.Usage = "A simple cli program to read file with a given name"
-	// app.Version = "1.0.0"
-	// app.Action = func(c *cli.Context) error {
-	// 	// do something
-	// 	return nil
-	// }
-	// app.Run([]string{"golang-cli-example", "--help"})
+	app.Name = "brainfuck-cli"
+	app.Usage = "brainfuck-cli"
+	app.Version = getGitVersion()
+	app.Author = "M.Reza khosravi"
 
-	fmt.Println(getGitVersion())
+	actions := new(Actions)
+	app.Commands = []cli.Command{
+		{
+			Name:    "file",
+			Aliases: []string{"f", "-f"},
+			Usage:   "run brainfuck code from file",
+			Action:  actions.File,
+		},
+		{
+			Name:    "interactive",
+			Aliases: []string{"i", "-i"},
+			Flags: []cli.Flag{
+				cli.BoolFlag{
+					Name:     "simple",
+					Usage:    "non fancy terminal",
+					Required: false,
+				},
+			},
+			Usage:       "run brainfuck code from stdin, just like terminal",
+			Description: "exit by typing 'exit'. clear terminal by typing 'clear'",
+			ArgsUsage:   "--simple for no fancy terminal",
+			Action:      actions.Interactive,
+		},
+		{
+			Name:    "read",
+			Aliases: []string{"r", "-r"},
+			Usage:   "run brainfuck code from args",
+			Action:  actions.Arg,
+		},
+	}
+
+	err := app.Run(os.Args)
+	if err != nil {
+		panic(err)
+	}
 }
