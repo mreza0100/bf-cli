@@ -3,6 +3,8 @@ github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d h1:U+s90UTSY
 github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsrgA7czyZG/E6dU=
 github.com/mreza0100/brainfuck v0.1.4 h1:nMaHbak/+lX/u7ps7csaqdSf32/hV6oni+2fZmNzhGU=
 github.com/mreza0100/brainfuck v0.1.4/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
+github.com/mreza0100/brainfuck v0.1.5 h1:0Taw7SDXAPM4lQpJUfFJc4ynPk2I2nHjHLpXyp+PekU=
+github.com/mreza0100/brainfuck v0.1.5/go.mod h1:RorCec1tnOZz9qG+3ta3kXPExIGoRaJjkVl9Nx1CM08=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/russross/blackfriday/v2 v2.0.1 h1:lPqVAte+HuHNfhJ/0LC98ESWRz8afy9tM/0RK8m9o+Q=
