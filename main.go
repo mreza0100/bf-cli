@@ -11,7 +11,7 @@ var app = cli.NewApp()
 func main() {
 	app.Name = "brainfuck-cli"
 	app.Usage = "brainfuck-cli"
-	app.Version = "0.1.7"
+	app.Version = "0.1.8"
 	app.Author = "M.Reza khosravi"
 
 	actions := new(Actions)
